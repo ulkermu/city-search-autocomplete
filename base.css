@@ -251,6 +251,7 @@ h1 {
 
 .main-input-active {
   background-color: var(--primary) !important;
+  color: #fff;
 }
 
 .hl {
