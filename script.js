@@ -107,7 +107,6 @@ function autoComplete() {
     autoCompleteDiv.setAttribute("id", `${this.id} main-input-list`);
     autoCompleteDiv.setAttribute("class", "main-input-items");
     this.parentNode.appendChild(autoCompleteDiv);
-    console.log(autoCompleteDiv);
 
     const matchArray = findMatches(val, cities);
 
