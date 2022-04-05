@@ -95,7 +95,7 @@ function findMatches(wordToMatch, cities) {
 function autoComplete() {
   let currentFocus;
 
-  searchInput.addEventListener("input", function (e) {
+  searchInput.addEventListener("input", function () {
     let autoCompleteDiv, autoCompleteValue;
     let val = this.value;
     closeAllLists();
@@ -120,7 +120,7 @@ function autoComplete() {
       autoCompleteValue = document.createElement("div");
       autoCompleteValue.setAttribute("class", "main-input-value");
       autoCompleteValue.innerHTML = `${cityName}`
-      autoCompleteValue.addEventListener("click", function (e) {
+      autoCompleteValue.addEventListener("click", function () {
         searchInput.value = city;
         closeAllLists();
       });
