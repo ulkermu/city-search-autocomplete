@@ -86,7 +86,7 @@ const searchInput = document.querySelector(".main-input");
 
 function findMatches(wordToMatch, cities) {
   return cities.filter((city) => {
-    // Here we need to figure out if the city matches what was searched
+    // Yazılanları büyük ve küçük ayırt etmeksizin aramamıza yarayacak.
     const regex = new RegExp(wordToMatch, "gi"); // gi; global, insensitive
     return city.match(regex);
   });
@@ -107,6 +107,7 @@ function autoComplete() {
     autoCompleteDiv.setAttribute("id", `${this.id} main-input-list`);
     autoCompleteDiv.setAttribute("class", "main-input-items");
     this.parentNode.appendChild(autoCompleteDiv);
+    console.log(autoCompleteDiv);
 
     const matchArray = findMatches(val, cities);
 
