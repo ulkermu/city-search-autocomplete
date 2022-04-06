@@ -112,14 +112,11 @@ function autoComplete() {
 
     matchArray.map((city) => {
       const regex = new RegExp(val, "gi");
-      const cityName = city.replace(
-        regex,
-        `<span class='hl'>${val}</span>`
-      );
+      const cityName = city.replace(regex, `<span class='hl'>${val}</span>`);
 
       autoCompleteValue = document.createElement("div");
       autoCompleteValue.setAttribute("class", "main-input-value");
-      autoCompleteValue.innerHTML = `${cityName}`
+      autoCompleteValue.innerHTML = `${cityName}`;
       autoCompleteValue.addEventListener("click", function () {
         searchInput.value = city;
         closeAllLists();
@@ -154,7 +151,7 @@ function autoComplete() {
   };
 
   const removeActive = (item) => {
-    for (i = 0; i < item.length; i++) {
+    for (let i = 0; i < item.length; i++) {
       item[i].classList.remove("main-input-active");
     }
   };
@@ -174,4 +171,3 @@ function autoComplete() {
 }
 
 autoComplete(document.getElementById("input"), cities);
-
